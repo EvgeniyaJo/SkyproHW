@@ -1,4 +1,4 @@
-//1 задание
+/*//1 задание
 let a = Number(10);
 alert(a);
 a = Number(20);
@@ -65,3 +65,4 @@ alert(user[info]);
 let name = prompt (String(`Как Ваше имя?`));
 let hello = (`Привет, ${name}!`);
 alert(hello);
+*/

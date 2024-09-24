@@ -20,7 +20,6 @@ body {
   background-position: calc(100% + 360px) -260px, left 60px;
   background-color: rgb(225, 255, 143);
 }
-
 .top__title {
   padding-top: 196px;
   margin-left: 120px;
@@ -31,7 +30,6 @@ body {
   line-height: 78px;
   text-align: left;
 }
-
 .top__text {
   margin-top: 24px;
   margin-left: 120px;
@@ -43,7 +41,6 @@ body {
   letter-spacing: 0px;
   text-align: left;
 }
-
 .top__btn {
   margin-top: 48px;
   margin-left: 120px;
@@ -60,7 +57,6 @@ body {
   text-align: center;
   font-family: Montserrat;
 }
-
 .top__btn:hover {
   box-sizing: border-box;
   border: 1px solid rgb(32, 32, 39);
@@ -85,14 +81,12 @@ body {
 .menu {
   padding: 94px 120px 50px 120px;
 }
-
 .menu__title {
   color: rgb(255, 255, 255);
   font-size: 64px;
   font-weight: 700;
   line-height: 78px;
 }
-
 .menu__text {
   color: rgb(255, 255, 255);
   font-family: Montserrat;
@@ -101,23 +95,20 @@ body {
   text-align: left;
   padding-top: 24px;
 }
-
 .menu__box {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   align-items: flex-start;
   -moz-column-gap: 32px;
-  column-gap: 32px;
+       column-gap: 32px;
   margin-top: 72px;
 }
-
 .menu__desc {
   display: flex;
   flex-direction: column;
   padding: 32px 32px 36px 32px;
 }
-
 .menu__card {
   display: flex;
   flex-direction: column;
@@ -126,28 +117,22 @@ body {
   max-width: 378px;
   transition: transform 0.5s ease;
 }
-
 .menu__card_min {
   max-height: 473px;
 }
-
 .menu__card_med {
   max-height: 512px;
   align-self: flex-end;
 }
-
 .menu__card_max {
   max-height: 551px;
 }
-
 .menu__card:hover {
   transform: scale(1.1);
 }
-
 .menu__img {
   border-radius: 30px;
 }
-
 .menu__btn {
   border-radius: 52.58px;
   background: rgb(247, 247, 247);
@@ -162,7 +147,6 @@ body {
   width: 112px;
   height: 36px;
 }
-
 .menu__name {
   color: rgb(32, 32, 39);
   font-family: Montserrat;
@@ -173,10 +157,59 @@ body {
   margin-top: 16px;
 }
 
+.games {
+  padding: 46px 120px 144px 120px;
+}
+.games__title {
+  color: rgb(255, 255, 255);
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 78px;
+  text-align: left;
+  padding-top: 46px;
+  padding-bottom: 72px;
+}
+.games__box {
+  flex-direction: column;
+  gap: 32px;
+}
+.games__card {
+  flex-direction: row-reverse;
+}
+.games__desc {
+  background-color: white;
+  padding: 48px;
+}
+.games__name {
+  color: rgb(32, 32, 39);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 59px;
+  text-align: left;
+  padding-bottom: 24px;
+}
+.games__text {
+  color: rgb(32, 32, 39);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: left;
+  padding-bottom: 36px;
+}
+.games__btn {
+  border-radius: 60px;
+  background: rgb(32, 32, 39);
+  font-family: Montserrat;
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 141.69%;
+  text-align: center;
+}
+
 .footer {
   background: rgb(189, 237, 53);
 }
-
 .footer__title {
   color: rgb(0, 0, 0);
   font-size: 24px;
@@ -185,6 +218,4 @@ body {
   text-align: center;
   padding-top: 61px;
   padding-bottom: 60px;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
