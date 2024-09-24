@@ -40,6 +40,7 @@
     text-align: left;
   }
   &__btn {
+    display: block;
     margin-top: 48px;
     margin-left: 120px;
     margin-bottom: 246px;
@@ -54,6 +55,8 @@
     line-height: 141.69%;
     text-align: center;
     font-family: Montserrat;
+    width: 247px;
+    text-decoration: none;
   }
   &__btn:hover {
     box-sizing: border-box;
@@ -74,8 +77,11 @@
   background-repeat: no-repeat, no-repeat;
   background-size: auto, auto;
   background-position: right 60px, left;
-  
-  
+   
+}
+.img {
+  display: block;
+  border-radius: 30px;
 }
 .menu {
     padding: 94px 120px 50px 120px;
@@ -128,10 +134,6 @@
     &__card:hover{
       transform: scale(1.10);
     }
-    
-    &__img {
-      border-radius: 30px;
-    }
 
     &__btn {
       border-radius: 52.58px;
@@ -170,16 +172,29 @@
     padding-bottom: 72px;
   }
   &__box {
+    display: flex;
     flex-direction: column;
-    gap: 32px;
-  }
+    gap: 32px;  
+    }
+
   &__card {
+    display: flex;
     flex-direction: row-reverse;
+    flex-wrap: wrap;
+    background-color: white;
+    border-radius: 30px;
+  }
+  &__card:nth-of-type(2n) {
+    flex-direction: row;
+  }
+  &__img {
+    display: block;
+    border-radius: 30px;
   }
   &__desc{
-    background-color: white;
+    box-sizing: border-box;
     padding: 48px;
-
+    flex-basis: 598px;
   }
   &__name {
     color: rgb(32, 32, 39);
@@ -198,14 +213,31 @@
     padding-bottom: 36px;
   }
   &__btn {
+    padding: 16px 28px;
+    box-sizing: border-box;
+    border: 1px solid rgb(32, 32, 39);
     border-radius: 60px;
     background: rgb(32, 32, 39);
-    font-family: Montserrat;
     color: rgb(255, 255, 255);
     font-size: 24px;
     font-weight: 600;
     line-height: 141.69%;
     text-align: center;
+    font-family: Montserrat;
+    width: 247px;
+    height: 66px;
+  }
+  &__btn:hover {
+    box-sizing: border-box;
+    border: 1px solid rgb(32, 32, 39);
+    border-radius: 60px;
+    background: rgb(250, 250, 250);
+    color: rgb(32, 32, 39);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 141.69%;
+    text-align: center;
+    font-family: Montserrat;
   }
 }
 .footer {
