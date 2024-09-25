@@ -65,4 +65,15 @@ alert(user[info]);
 let name = prompt (String(`Как Ваше имя?`));
 let hello = (`Привет, ${name}!`);
 alert(hello);
+
+// дополнительное задание
+let number = prompt(`Загадайте любое число?`);
+let number2 = (number * 2);
+alert(`Если Ваше число удвоить, то получится ${number2}`);
+let number3 = (number2 + 10);
+alert(`Если к полученному результату прибавить десять, то получится ${number3}`);
+let  number4 = (number3 / 2);
+alert(`Если полученный результат разделить на два, то получится ${number4}`);
+let  results = (number4 - number);
+alert(`Если из полученного результата отнять загаданное число, то получится ${results}`);
 */
