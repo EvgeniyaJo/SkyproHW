@@ -242,6 +242,10 @@ body {
   font-family: Montserrat;
 }
 
+.mobile {
+  display: none;
+}
+
 .footer {
   background: rgb(189, 237, 53);
 }
@@ -253,4 +257,206 @@ body {
   text-align: center;
   padding-top: 61px;
   padding-bottom: 60px;
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .menu__box {
+    gap: 28px;
+  }
+  .menu__card {
+    min-height: 551px;
+  }
+  .games__box {
+    flex-direction: column;
+  }
+  .games__card {
+    flex-direction: column;
+    max-width: -moz-min-content;
+    max-width: min-content;
+  }
+  .games__card:nth-of-type(2n) {
+    flex-direction: column;
+  }
+  .games__desc {
+    flex-basis: content;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .top__title {
+    font-size: 50px;
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+  .top__text {
+    font-size: 16px;
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+  .top__btn {
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+  .menu {
+    padding: 60px 80px 50px 80px;
+  }
+  .menu__title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 78px;
+  }
+  .menu__text {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+    padding-top: 16px;
+  }
+  .menu__box {
+    gap: 28px;
+    margin-top: 50px;
+  }
+  .games {
+    padding: 20px 80px 50px 80px;
+  }
+  .games__title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 78px;
+    padding-top: 0px;
+    padding-bottom: 32px;
+  }
+  .games__box {
+    flex-direction: column;
+  }
+  .games__card {
+    flex-direction: column;
+    max-width: -moz-min-content;
+    max-width: min-content;
+  }
+  .games__card:nth-of-type(2n) {
+    flex-direction: column;
+  }
+  .games__desc {
+    flex-basis: content;
+  }
+  .games__name {
+    font-size: 32px;
+    line-height: normal;
+  }
+  .games__text {
+    font-size: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .top {
+    height: 700px;
+    background-image: url(image/mobstar1.svg), url(image/mobstar2.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto, auto;
+    background-position: calc(100% + 150px) -80px, left 60px;
+    background-color: rgb(225, 255, 143);
+  }
+  .top__title {
+    margin-left: 56px;
+    margin-right: 56px;
+    margin-bottom: 24px;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 49px;
+    text-align: left;
+  }
+  .top__text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    margin-left: 56px;
+    margin-right: 56px;
+  }
+  .top__btn {
+    margin-top: 36px;
+    margin-bottom: 182px;
+    margin-left: 56px;
+    margin-right: 56px;
+    font-size: 16px;
+    width: 285px;
+  }
+  .content {
+    background-image: none;
+  }
+  .menu {
+    display: none;
+  }
+  .games {
+    display: none;
+  }
+  .mobile {
+    display: block;
+    padding: 0px 16px 50px 16px;
+  }
+  .mobile__title {
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 49px;
+    text-align: left;
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  .mobile__box {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .mobile__card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 30px;
+  }
+  .mobile__img {
+    display: block;
+    border-radius: 30px;
+  }
+  .mobile__desc {
+    box-sizing: border-box;
+    padding: 29px;
+    align-items: center;
+  }
+  .mobile__name {
+    color: rgb(32, 32, 39);
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 39px;
+    text-align: left;
+    padding-bottom: 16px;
+  }
+  .mobile__text {
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    padding-bottom: 32px;
+  }
+  .mobile__btn {
+    padding: 16px 28px;
+    margin-bottom: 3px;
+    box-sizing: border-box;
+    border: 1px solid rgb(32, 32, 39);
+    border-radius: 60px;
+    background: rgb(32, 32, 39);
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 141.69%;
+    text-align: center;
+    font-family: Montserrat;
+    width: 285px;
+    height: 55px;
+  }
+  .footer__title {
+    font-size: 16px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }/*# sourceMappingURL=style.css.map */
