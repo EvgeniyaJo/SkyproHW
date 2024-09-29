@@ -5,6 +5,7 @@
 
 body {
   font-family: "Montserrat", sans-serif;
+  cursor: url(image/pointer.png), auto;
 }
 
 .center {
@@ -59,6 +60,7 @@ body {
   font-family: Montserrat;
   width: 247px;
   text-decoration: none;
+  cursor: url(image/pointer.png), auto;
 }
 .top__btn:hover {
   box-sizing: border-box;
@@ -151,6 +153,7 @@ body {
   padding: 8px 16px;
   width: 112px;
   height: 36px;
+  cursor: url(image/pointer.png), auto;
 }
 .menu__name {
   color: rgb(32, 32, 39);
@@ -228,6 +231,7 @@ body {
   font-family: Montserrat;
   width: 247px;
   height: 66px;
+  cursor: url(image/pointer.png), auto;
 }
 .games__btn:hover {
   box-sizing: border-box;
@@ -453,6 +457,7 @@ body {
     font-family: Montserrat;
     width: 285px;
     height: 55px;
+    cursor: url(image/pointer.png), auto;
   }
   .footer__title {
     font-size: 16px;

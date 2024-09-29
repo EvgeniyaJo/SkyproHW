@@ -61,4 +61,15 @@ switch (monthNumber) {
         alert('В году всего 12 месяцев');
         break;
 }
-*/
+
+// доп.задание 1
+let num = Number(prompt (`Введите любое число`));
+if (isNaN(num)) {
+    alert (`Вы ввели НЕ число!`);
+} else if (num % 2 === 0) {
+    alert (`ЧЕТНОЕ число`)
+} else {
+    alert (`НЕЧЕТНОЕ число`);
+}
+ */  
+// доп.задание 2
