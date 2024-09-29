@@ -1,4 +1,4 @@
-/*//1 задание
+//1 задание
 let password = String `122345qwerty`;
 let password2 = String (prompt (`Введите пароль`));
 alert (password===password2 ? `Пароль введен верно` : `Пароль введен неверно`);
@@ -71,5 +71,40 @@ if (isNaN(num)) {
 } else {
     alert (`НЕЧЕТНОЕ число`);
 }
- */  
+
 // доп.задание 2
+var clientOS =prompt(`Укажите OS Вашего телефона? IOs - 0; Android - 1`);
+switch (clientOS) {
+    case '0':
+        alert('Установите версию приложения для IOs по ссылке');
+        break;
+    case '1':
+        alert('Установите версию приложения для Android по ссылке');
+        break;
+        default:
+        alert('Вы ввели некоректные данные');
+        break;
+}
+   
+// доп.задание 3
+var clientOS1 =prompt(`Укажите OS Вашего телефона? IOs - 0; Android - 1`);
+let clientDeviceYear =prompt(`Укажите год выпуска Вашего телефона?`);
+    switch (clientOS1) {
+        case  `0`:
+            if (clientDeviceYear < 2015) {
+                alert(`Установите ОБЛЕГЧЕННУЮ версию приложения для IOs по ссылке`);  
+            } else {
+                alert(`Установите версию приложения для IOs по ссылке`);
+            }
+            break;
+        case  `1`:
+            if (clientDeviceYear < 2015) {
+                alert(`Установите ОБЛЕГЧЕННУЮ версию приложения для Android по ссылке`);  
+            } else {
+               alert(`Установите версию приложения для Android по ссылке`);
+            }
+            break;
+        default:
+        alert('Вы ввели некоректные данные');
+        break;
+    }
