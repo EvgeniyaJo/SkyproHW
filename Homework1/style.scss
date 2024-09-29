@@ -40,6 +40,7 @@
     text-align: left;
   }
   &__btn {
+    display: block;
     margin-top: 48px;
     margin-left: 120px;
     margin-bottom: 246px;
@@ -54,6 +55,8 @@
     line-height: 141.69%;
     text-align: center;
     font-family: Montserrat;
+    width: 247px;
+    text-decoration: none;
   }
   &__btn:hover {
     box-sizing: border-box;
@@ -74,8 +77,11 @@
   background-repeat: no-repeat, no-repeat;
   background-size: auto, auto;
   background-position: right 60px, left;
-  
-  
+   
+}
+.img {
+  display: block;
+  border-radius: 30px;
 }
 .menu {
     padding: 94px 120px 50px 120px;
@@ -114,23 +120,19 @@
       background-color: white;
       max-width: 378px;
       transition: transform 0.5s ease;
-      &-min{
+      &_min{
         max-height: 473px;
       }
-      &-med{
+      &_med{
         max-height: 512px;
         align-self: flex-end;
       }
-      &-max{
+      &_max{
         max-height: 551px;
       }
     }
     &__card:hover{
       transform: scale(1.10);
-    }
-    
-    &__img {
-      border-radius: 30px;
     }
 
     &__btn {
@@ -157,6 +159,90 @@
       margin-top: 16px;
     }
 }
+.games {
+  padding: 46px 120px 144px 120px;
+
+  &__title {
+    color: rgb(255, 255, 255);
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 78px;
+    text-align: left;
+    padding-top: 46px;
+    padding-bottom: 72px;
+  }
+  &__box {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;  
+    }
+
+  &__card {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    background-color: white;
+    border-radius: 30px;
+  }
+  &__card:nth-of-type(2n) {
+    flex-direction: row;
+  }
+  &__img {
+    display: block;
+    border-radius: 30px;
+  }
+  &__desc{
+    box-sizing: border-box;
+    padding: 48px;
+    flex-basis: 598px;
+  }
+  &__name {
+    color: rgb(32, 32, 39);
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 59px;
+    text-align: left;
+    padding-bottom: 24px;
+  }
+  &__text {
+    color: rgb(32, 32, 39);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: left;
+    padding-bottom: 36px;
+  }
+  &__btn {
+    padding: 16px 28px;
+    box-sizing: border-box;
+    border: 1px solid rgb(32, 32, 39);
+    border-radius: 60px;
+    background: rgb(32, 32, 39);
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 141.69%;
+    text-align: center;
+    font-family: Montserrat;
+    width: 247px;
+    height: 66px;
+  }
+  &__btn:hover {
+    box-sizing: border-box;
+    border: 1px solid rgb(32, 32, 39);
+    border-radius: 60px;
+    background: rgb(250, 250, 250);
+    color: rgb(32, 32, 39);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 141.69%;
+    text-align: center;
+    font-family: Montserrat;
+  }
+}
+.mobile {
+  display: none;
+}
 .footer {
     background: rgb(189, 237, 53);
   &__title {
@@ -169,4 +255,215 @@
       padding-bottom: 60px;
   }
 }
+@media (min-width: 1024px) and (max-width:1439px) {
+  .menu {
+    &__box {
+      gap: 28px;
+    }
+    &__card {
+      min-height: 551px;
+    }
+  }
+  .games {
+    &__box {
+      flex-direction: column;
+    }
+    &__card {
+      flex-direction: column;
+      max-width: min-content;
+    }
+    &__card:nth-of-type(2n) {
+      flex-direction: column;
+    }
+    &__desc {
+      flex-basis: content;
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .top{
+    &__title {
+      font-size: 50px;
+      margin-left: 80px;
+      margin-right: 80px;
+    }
+    &__text {
+      font-size: 16px;
+      margin-left: 80px;
+      margin-right: 80px;
+    }
+    &__btn {
+      margin-left: 80px;
+      margin-right: 80px;
+    }
+  }
+  .menu {
+    padding: 60px 80px 50px 80px;
+    &__title {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 78px;
+    }
+    &__text{
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+    padding-top: 16px;
+    }
+    &__box {
+      gap: 28px;
+      margin-top: 50px;
+    }
+    
+  }
+  .games {
+      padding: 20px 80px 50px 80px;
+      &__title {
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 78px;
+        padding-top: 0px;
+        padding-bottom: 32px;
+      }
+    &__box {
+      flex-direction: column;
+    }
+    &__card {
+      flex-direction: column;
+      max-width: min-content;
+    }
+    &__card:nth-of-type(2n) {
+      flex-direction: column;
+    }
+    &__desc {
+      flex-basis: content;
+    }
+    &__name {
+      font-size: 32px;
+      line-height: normal;
+    }
+    &__text {
+      font-size: 20px;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .top{
+    height: 700px;
+    background-image:url(image/mobstar1.svg), url(image/mobstar2.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto, auto;
+    background-position: calc(100% + 150px) -80px, left 60px;
+    background-color: rgb(225, 255, 143);
+  
+  &__title{
+    margin-left: 56px;
+    margin-right: 56px;
+    margin-bottom: 24px;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 49px;
+    text-align: left;
+  }
+  &__text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    margin-left: 56px;
+    margin-right: 56px;
+  }
+  &__btn {
+    margin-top: 36px;
+    margin-bottom: 182px;
+    margin-left: 56px;
+    margin-right: 56px;
+    font-size: 16px;
+    width: 285px;
+  }
+  }
+  .content {
+    background-image: none;
+  }
+  .menu{
+    display: none;
+  }
+  .games {
+    display: none;
+  }
+  .mobile {
+    display: block;
+    padding: 0px 16px 50px 16px;
 
+    &__title {
+      color: rgb(255, 255, 255);
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 49px;
+      text-align: left;
+      padding-top: 48px;
+      padding-bottom: 48px;
+    }
+    &__box {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      }
+  
+    &__card {
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      border-radius: 30px;
+    }
+    &__img {
+      display: block;
+      border-radius: 30px;
+    }
+    &__desc{
+      box-sizing: border-box;
+      padding: 29px;
+      align-items: center;
+    }
+    &__name {
+      color: rgb(32, 32, 39);
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 39px;
+      text-align: left;
+      padding-bottom: 16px;
+    }
+    &__text {
+      color: rgb(0, 0, 0);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20px;
+      text-align: left;
+      padding-bottom: 32px;
+    }
+    &__btn {
+      padding: 16px 28px;
+      margin-bottom: 3px;
+      box-sizing: border-box;
+      border: 1px solid rgb(32, 32, 39);
+      border-radius: 60px;
+      background: rgb(32, 32, 39);
+      color: rgb(255, 255, 255);
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 141.69%;
+      text-align: center;
+      font-family: Montserrat;
+      width: 285px;
+      height: 55px;
+    }
+  }
+  .footer {
+    
+  &__title {
+      font-size: 16px;
+      padding-top: 40px;
+      padding-bottom: 40px;
+  }
+}
+}
