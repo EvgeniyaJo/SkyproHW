@@ -1,6 +1,6 @@
 //1 задание
-let password = String `122345qwerty`;
-let password2 = String (prompt (`Введите пароль`));
+let password = `122345qwerty`;
+let password2 = (prompt (`Введите пароль`));
 alert (password===password2 ? `Пароль введен верно` : `Пароль введен неверно`);
 
 //2 задание
