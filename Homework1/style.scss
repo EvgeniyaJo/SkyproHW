@@ -5,6 +5,7 @@
   
   body {
     font-family: "Montserrat", sans-serif;
+    cursor: url(image/pointer.png),auto;
   }
   .center {
     padding-left: calc(50% - 720px);
@@ -57,6 +58,7 @@
     font-family: Montserrat;
     width: 247px;
     text-decoration: none;
+    cursor: url(image/pointer.png),auto;
   }
   &__btn:hover {
     box-sizing: border-box;
@@ -148,6 +150,7 @@
       padding: 8px 16px;
       width: 112px;
       height: 36px;
+      cursor: url(image/pointer.png),auto;
     }
     &__name{
       color: rgb(32, 32, 39);
@@ -226,6 +229,7 @@
     font-family: Montserrat;
     width: 247px;
     height: 66px;
+    cursor: url(image/pointer.png),auto;
   }
   &__btn:hover {
     box-sizing: border-box;
@@ -456,6 +460,7 @@
       font-family: Montserrat;
       width: 285px;
       height: 55px;
+      cursor: url(image/pointer.png),auto;
     }
   }
   .footer {
