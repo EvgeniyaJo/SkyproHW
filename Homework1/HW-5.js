@@ -115,7 +115,18 @@ function askAge() {
       */
 
     //7 задание
-  function getArea() {
 
-  }
-    
+    const circle1 = {
+        radius : 2,
+        getArea : function() {
+            let area = 3.14 * (this.radius ** 2)
+            return area;
+        }
+        getPerimeter : getPerimeter,
+    }
+    const circle2 = {
+        radius : 5,
+        getArea : getArea,
+        getPerimeter : getPerimeter,
+    }
+ 
