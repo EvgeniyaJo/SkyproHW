@@ -1,4 +1,4 @@
-/*// Игра "угадай число"
+// Игра "угадай число"
 function guessNumber() {
     
 
@@ -112,21 +112,29 @@ function askAge() {
     }
 }
     alert (exponentiation());
-      */
+  
 
     //7 задание
-
+    function getArea() {
+        let area = Math.PI * this.radius ** 2;
+        return (`Площадь круга составляет ${area} см`);
+}
+    function getPerimeter() {
+        let perimeter = 2 * Math.PI * this.radius;
+        return (`Периметр круга составляет ${perimeter} см`);
+}
     const circle1 = {
         radius : 2,
-        getArea : function() {
-            let area = 3.14 * (this.radius ** 2)
-            return area;
-        }
+        getArea : getArea,
         getPerimeter : getPerimeter,
-    }
+}
+
     const circle2 = {
         radius : 5,
         getArea : getArea,
         getPerimeter : getPerimeter,
     }
- 
+    alert (circle1.getArea());
+    alert (circle2.getArea());
+    alert (circle1.getPerimeter());
+    alert (circle2.getPerimeter());
