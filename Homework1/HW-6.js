@@ -1,4 +1,4 @@
-/*//1 задание
+//1 задание
 const num = [1, 5, 4, 10, 0, 3];
 for (let i = 0; i < num.length; i++) {
     if (num[i] == 10)
@@ -82,5 +82,27 @@ console.log (mapWords);
 const arr8 = [1, -2, 3, 4, -5, 6, 7, 8, -9, 10,];
 const filterArr8 = arr8.filter(i => i >= 0);
 console.log (filterArr8);
-*/
+
 //14 задание
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min); 
+}
+const getArr = [];
+for (let i = 0; i < 10; i++) {
+    getArr.push(getRandomInt(1, 10));
+}
+console.log(getArr);
+const filterGetArr = getArr.filter(i => i % 2 ==0);
+console.log(filterGetArr);
+
+//15 задание
+function getRandomInt2(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min); 
+}
+const getArr2 = [];
+for (let i = 0; i < 6; i++) {
+    getArr2.push(getRandomInt2(1, 10));
+}
+console.log(getArr2);
+let reduseGetArr2 = getArr2.reduce((a, b) => a + b) / getArr2.length;
+console.log(reduseGetArr2);
