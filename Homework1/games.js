@@ -44,9 +44,54 @@ const randomInt2 = getRandomInt(0, 100);
 const signs = [`+`, `-`, `*`, `/`];
 const randomIndex = Math.floor(Math.random() * (signs.length));
 let randomSigns =signs[randomIndex];
-function getRes() {
+function getResult() {
+let result;
 let task;
-if (randomSigns === `+`) {
+switch (randomSigns) {
+  case `+` :
+    task = (`${randomInt1} + ${randomInt2}`);
+    result = randomInt1 + randomInt2;
+        break;
+  case `-` :
+    task = (`${randomInt1} - ${randomInt2}`);
+    result = randomInt1 - randomInt2;
+        break;
+  case `*` :
+    task = (`${randomInt1} * ${randomInt2}`);
+    result = randomInt1 * randomInt2;
+       break;
+  case `/` :
+    task = (`${randomInt1} / ${randomInt2}`);
+    result = randomInt1 / randomInt2;
+      break;
+    default:
+    alert( "Нет таких значений" );
+}
+let userAnswear = prompt(`Решите задачу? \n ${task}`);
+if (userAnswear == result) {
+  alert (`Вы решили задачу верно!`);
+  } 
+else {
+      alert (`Вы решили задачу НЕверно!`);
+  }
+}
+getResult();
+}
+
+
+
+
+/*let userAnswear = Number(prompt(`Решите задачу? \n ${result}`));
+if (userAnswear === result) {
+    alert (`Вы решили задачу верно!`);
+    } 
+    else {
+        alert (`Вы решили задачу НЕверно!`);
+    }
+
+  
+
+  if (randomSigns === `+`) {
     task = (`${randomInt1} + ${randomInt2}`);
 }
 if (randomSigns === `-`) {
@@ -58,16 +103,35 @@ if (randomSigns === `*`) {
 if (randomSigns === `/`) {
     task = (`${randomInt1} / ${randomInt2}`);
 }
+
+function getRes() {
+let result;
+let task;
+switch (randomSigns) {
+  case `+` :
+    task = (`${randomInt1} + ${randomInt2}`);
+    result = prompt(`Решите задачу? \n ${task}`);
+        break;
+  case `-` :
+    task = (`${randomInt1} - ${randomInt2}`);
+    result = prompt(`Решите задачу? \n ${task}`);
+        break;
+  case `*` :
+    task = (`${randomInt1} * ${randomInt2}`);
+    result = prompt(`Решите задачу? \n ${task}`);
+       break;
+  case `/` :
+    result = task = (`${randomInt1} / ${randomInt2}`);
+    prompt(`Решите задачу? \n ${task}`);
+      break;
+    default:
+    alert( "Нет таких значений" );
 }
-let result = getRes();
-
-
-let userAnswear = Number(prompt(`Решите задачу? \n ${result}`));
-if (userAnswear === result) {
-    alert (`Вы решили задачу верно!`);
-    } 
-    else {
-        alert (`Вы решили задачу НЕверно!`);
-    }
-
+if (result === task) {
+  alert (`Вы решили задачу верно!`);
+  } 
+  else {
+      alert (`Вы решили задачу НЕверно!`);
+  }
 }
+    */
