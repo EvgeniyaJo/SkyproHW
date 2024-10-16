@@ -106,3 +106,4 @@ for (let i = 0; i < 6; i++) {
 console.log(getArr2);
 let reduseGetArr2 = getArr2.reduce((a, b) => a + b) / getArr2.length;
 console.log(reduseGetArr2);
+
