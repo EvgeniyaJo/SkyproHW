@@ -55,9 +55,8 @@ let joinText = reverseText.join(``);
 console.log(joinText);
 
 //9 задание
-let arr4 = [1, 2, 3];
-let arr5 = [4, 5, 6]
-arr4 = [...arr4,...arr5];
+let arr4 = [[1, 2, 3], [4, 5, 6]];
+arr4 = arr4.flat();
 console.log(arr4);
 
 //10 задание

@@ -1,12 +1,11 @@
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1) + min); 
+}
 // Игра "угадай число"
 function guessNumber() {
     
-
-  function getRandomIntInclusive(min, max) {
-      min = Math.ceil(min);
-      max = Math.floor(max);
-      return Math.floor(Math.random() * (max - min + 1) + min); 
-  }
   const randomInt = getRandomIntInclusive(0, 100);  
   while (true){
       let answer = Number(prompt(`Угадай число от 1 до 100`));
@@ -30,53 +29,54 @@ function guessNumber() {
   }
 
   //Игра "простая арифметика"
-function simpleMath() {
+  function simpleMath() {
   
+    const randomInt1 = getRandomIntInclusive(0, 100);
+    const randomInt2 = getRandomIntInclusive(0, 100);
+    
+    const signs = [`+`, `-`, `*`, `/`];
+    const randomIndex = Math.floor(Math.random() * (signs.length));
+    let randomSigns =signs[randomIndex];
+    function getResult() {
+    let result;
+    let task;
+    switch (randomSigns) {
+      case `+` :
+        task = (`${randomInt1} + ${randomInt2}`);
+        result = randomInt1 + randomInt2;
+            break;
+      case `-` :
+        task = (`${randomInt1} - ${randomInt2}`);
+        result = randomInt1 - randomInt2;
+            break;
+      case `*` :
+        task = (`${randomInt1} * ${randomInt2}`);
+        result = randomInt1 * randomInt2;
+           break;
+      case `/` :
+        if (randomInt1 < randomInt2 || randomInt2 == 0) {
+          task = (`${randomInt2} / ${randomInt1}`);
+          result = (randomInt2 / randomInt1).toFixed(2);
+        } else {
+          task = (`${randomInt1} / ${randomInt2}`);
+          result = (randomInt1 / randomInt2).toFixed(2);
+        }
+          break;
+        default:
+        alert( "Нет таких значений" );
+    }
+    let userAnswear = prompt(`Решите задачу? \n ${task}`);
+    if (userAnswear == result) {
+      alert (`Вы решили задачу верно!`);
+      } 
+    else {
+          alert (`Вы решили задачу НЕверно!`);
+      }
+    
+    }
+    getResult();
+    }
 
-  function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1) + min); 
-}
-const randomInt1 = getRandomInt(0, 100);
-const randomInt2 = getRandomInt(0, 100);
-
-const signs = [`+`, `-`, `*`, `/`];
-const randomIndex = Math.floor(Math.random() * (signs.length));
-let randomSigns =signs[randomIndex];
-function getResult() {
-let result;
-let task;
-switch (randomSigns) {
-  case `+` :
-    task = (`${randomInt1} + ${randomInt2}`);
-    result = randomInt1 + randomInt2;
-        break;
-  case `-` :
-    task = (`${randomInt1} - ${randomInt2}`);
-    result = randomInt1 - randomInt2;
-        break;
-  case `*` :
-    task = (`${randomInt1} * ${randomInt2}`);
-    result = randomInt1 * randomInt2;
-       break;
-  case `/` :
-    task = (`${randomInt1} / ${randomInt2}`);
-    result = randomInt1 / randomInt2;
-      break;
-    default:
-    alert( "Нет таких значений" );
-}
-let userAnswear = prompt(`Решите задачу? \n ${task}`);
-if (userAnswear == result) {
-  alert (`Вы решили задачу верно!`);
-  } 
-else {
-      alert (`Вы решили задачу НЕверно!`);
-  }
-}
-getResult();
-}
 
 
 
@@ -134,4 +134,9 @@ if (result === task) {
       alert (`Вы решили задачу НЕверно!`);
   }
 }
-    */
+}
+  
+
+
+
+  */
