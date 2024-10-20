@@ -55,25 +55,29 @@ function guessNumber() {
            break;
       case `/` :
         if (randomInt1 < randomInt2 || randomInt2 == 0) {
-          task = (`${randomInt2} / ${randomInt1}`);
+          task =(`${randomInt2} / ${randomInt1} (ответ округлять до сотых)`);
           result = (randomInt2 / randomInt1).toFixed(2);
         } else {
-          task = (`${randomInt1} / ${randomInt2}`);
+          task = (`${randomInt1} / ${randomInt2} (ответ округлять до сотых)`);
           result = (randomInt1 / randomInt2).toFixed(2);
         }
           break;
         default:
         alert( "Нет таких значений" );
     }
+   
     let userAnswear = prompt(`Решите задачу? \n ${task}`);
-    if (userAnswear == result) {
-      alert (`Вы решили задачу верно!`);
-      } 
-    else {
-          alert (`Вы решили задачу НЕверно!`);
-      }
-    
+    if (userAnswear == null) {
+      alert (`Вы хотите выйти?`);
     }
+    else if (userAnswear == result){
+          alert (`Вы решили задачу верно!`);
+      }
+      else{
+        alert (`Вы решили задачу НЕверно!`);
+      }
+    }
+  
     getResult();
     }
 
