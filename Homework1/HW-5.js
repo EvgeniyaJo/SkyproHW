@@ -1,33 +1,3 @@
-// Игра "угадай число"
-function guessNumber() {
-    
-
-function getRandomIntInclusive(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1) + min); 
-}
-const randomInt = getRandomIntInclusive(0, 100);  
-while (true){
-    let answer = Number(prompt(`Угадай число от 1 до 100`));
-        if (isNaN(answer)) {
-            alert (`Вы ввели НЕ число`);
-            continue
-            } 
-        if (answer < randomInt) {
-            alert (`Ваше число МЕНЬШЕ загаданного!`);
-            continue
-            } 
-        if (answer > randomInt) {
-            alert (`Ваше число БОЛЬШЕ загаданного!`);
-            continue
-            } 
-        if (answer === randomInt)
-            alert(`Вы УГАДАЛИ!`);
-            break
-            }
-            
-}
 //1 задание
 function returnMin(a, b = 1) {
     if (a <= b) {
