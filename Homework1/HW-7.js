@@ -27,19 +27,20 @@ console.log(Math.max.apply(null,arr));
 let int = Math.random() * 10;
 console.log(Math.floor(int));
 
-/*//6 задание
+//6 задание
 let userNum = Number(prompt(`Введите число?`));
-function getRandomInt() {
-    Math.random() * userNum; 
-    console.log( Math.random() * userNum);
+function getRandomInt(min, max) {
+    min = 0;
+    max = Math.floor(userNum);
+    return Math.floor(Math.random() * (max - min + 1) + min);
 }
-const newArr = [];
-    for (let i = 0; i < randomInt / 2; i++) {
-      newArr.push(getRandomInt(0, randomInt));
-  }
-  
- 
-console.log(newArr);*/
+const randomInt = getRandomInt(0, userNum);
+const getArr = [];
+for (let i = 0; i < userNum / 2; i++) {
+    getArr.push(getRandomInt(0, userNum));
+}
+console.log(getArr);
+
 
 //7 задание
 let userNum1 = Number(prompt(`Введите 1 число?`));
@@ -50,8 +51,8 @@ function getRandomIntInclusive(min, max) {
     max = Math.floor(userNum2);
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
-const randomInt = getRandomIntInclusive(userNum1, userNum2);
-console.log(randomInt);
+const randomInt1 = getRandomIntInclusive(userNum1, userNum2);
+console.log(randomInt1);
 
 //8 задание
 let myDate = new Date();
@@ -65,3 +66,10 @@ let searchDate = new Date(forward73);
 console.log(searchDate);
 
 //10 задание
+const days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
+const months = ["Января", "Февраля", "Марта", "Апреля", "Мая", "Июня", "Июля", "Августа", "Сентября", "Октября", "Ноября", "Декабря"];
+let curDate = new Date();
+let newDate = `Дата: ` + curDate.getDate() + ` ` + months[curDate.getMonth()] + ` ` + curDate.getFullYear() + ` - это `+ days[curDate.getDay()];
+let newTime = `Время: ` + curDate.getHours() + ` ` + curDate.getMinutes() + ` ` + curDate.getSeconds();
+console.log(newDate, newTime);
+
