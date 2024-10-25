@@ -23,9 +23,9 @@ const arr = [52, 53, 49, 77, 21, 32,];
 console.log(Math.min.apply(null,arr));
 console.log(Math.max.apply(null,arr));
 
-//5 задание
-let int = Math.random() * 10;
-console.log(Math.floor(int));
+//5 задание0
+let int = Math.floor(Math.random() * 10)+1;
+console.log(int);
 
 //6 задание
 let userNum = Number(prompt(`Введите число?`));
