@@ -3,7 +3,7 @@ function getRandomIntInclusive(min, max) {
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1) + min); 
 }
-// Игра "угадай число"
+// 1 Игра "угадай число"
 function guessNumber() {
     
   const randomInt = getRandomIntInclusive(0, 100);  
@@ -28,7 +28,7 @@ function guessNumber() {
   }
 
 
-  //Игра "простая арифметика"
+  //2 Игра "простая арифметика"
   function simpleMath() {
   
     const randomInt1 = getRandomIntInclusive(1, 100);
@@ -82,7 +82,7 @@ function guessNumber() {
     }
 
 
-// Игра "переверни текст"
+//3 Игра "переверни текст"
 function reverseText() {
 let userText = prompt(`Введите слово, чтобы я перевернул`);
 let lowerUserText = userText.toLowerCase();
@@ -96,7 +96,7 @@ if (!isNaN(userText)){
 }
 
 
-// Игра "викторина"
+//4 Игра "викторина"
 function simpleQuiz() {
   const quiz = [
     { question: `Какой цвет неба?`,
@@ -131,3 +131,56 @@ function simpleQuiz() {
   }
   alert(`Всего верных ответов: ${num}`);
 }
+
+
+//5 Игра "камень, ножницы, бумага"
+function RockPaperScissors() {
+
+const options = [`камень`, `ножницы`, `бумага`,];
+const randomIndex = Math.floor(Math.random() * (options.length));
+let randomOptions = options[randomIndex];
+console.log (randomOptions);
+  
+
+  function moveUser() {
+  let userChoice = (prompt(`Давай сыграем в "Камень Ножницы Бумага"? \nНапиши "камень", "ножницы" или "бумага".`)).toLowerCase();
+  if (userChoice == 'камень' || userChoice == 'ножницы' || userChoice == 'бумага'){
+        
+    switch (randomOptions) {
+        case `камень` :
+  if (userChoice == `ножницы`) {
+  alert (`Вы проиграли`);
+  } else if (userChoice == `бумага`) {
+  alert (`Вы выиграли`);
+  } else {
+  alert (`ничья`);
+  }
+  break;
+        case `ножницы` :
+  if (userChoice == `бумага`) {
+  alert (`Вы проиграли`);
+  } else if (userChoice == `камень`) {
+  alert (`Вы выиграли`);
+  } else {
+  alert (`ничья`);
+  }
+  break;
+        case `бумага` :
+  if (userChoice == `камень`) {
+  alert (`Вы проиграли`);
+  } else if (userChoice == `ножницы`) {
+  alert (`Вы выиграли`);
+  } else {
+  alert (`ничья`);
+  }
+  break;
+  default:
+  alert( "Нет таких значений" );
+      }
+
+  } else {
+   alert (`Вы ввели неверное значение`);
+  }
+  }
+  moveUser();
+  }
