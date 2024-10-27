@@ -119,7 +119,7 @@ function simpleQuiz() {
   
   let num = 0;
   for (let i = 0; i < quiz.length; i++){
-    let quizQuest = Number(prompt(`Выберите правильный ответ? \n${quiz[i].question} \n${quiz[i].options}`));
+    let quizQuest = Number(prompt(`Выберите верный вариант ответа? \n${quiz[i].question} \n${quiz[i].options}`));
     if (isNaN(quizQuest)){
       alert (`Вы ввели некорректное значение!`);
     } else if (quizQuest == quiz[i][`correctAnswer`]){
