@@ -142,36 +142,36 @@ let randomOptions = options[randomIndex];
 console.log (randomOptions);
   
 
-  function moveUser() {
+  function printResult() {
   let userChoice = (prompt(`Давай сыграем в "Камень Ножницы Бумага"? \nНапиши "камень", "ножницы" или "бумага".`)).toLowerCase();
-  if (userChoice == 'камень' || userChoice == 'ножницы' || userChoice == 'бумага'){
+  if (userChoice === 'камень' || userChoice === 'ножницы' || userChoice === 'бумага'){
         
     switch (randomOptions) {
         case `камень` :
-  if (userChoice == `ножницы`) {
-  alert (`Вы проиграли`);
-  } else if (userChoice == `бумага`) {
-  alert (`Вы выиграли`);
+  if (userChoice === `ножницы`) {
+  alert (`Вы проиграли. Выбор компьютера "${randomOptions}"`);
+  } else if (userChoice === `бумага`) {
+  alert (`Вы выиграли. Выбор компьютера "${randomOptions}"`);
   } else {
-  alert (`ничья`);
+  alert (`Ничья. Выбор компьютера "${randomOptions}"`);
   }
   break;
         case `ножницы` :
-  if (userChoice == `бумага`) {
-  alert (`Вы проиграли`);
-  } else if (userChoice == `камень`) {
-  alert (`Вы выиграли`);
+  if (userChoice === `бумага`) {
+  alert (`Вы проиграли. Выбор компьютера "${randomOptions}"`);
+  } else if (userChoice === `камень`) {
+  alert (`Вы выиграли. Выбор компьютера "${randomOptions}"`);
   } else {
-  alert (`ничья`);
+  alert (`Ничья. Выбор компьютера "${randomOptions}"`);
   }
   break;
         case `бумага` :
-  if (userChoice == `камень`) {
-  alert (`Вы проиграли`);
-  } else if (userChoice == `ножницы`) {
-  alert (`Вы выиграли`);
+  if (userChoice === `камень`) {
+  alert (`Вы проиграли. Выбор компьютера "${randomOptions}"`);
+  } else if (userChoice === `ножницы`) {
+  alert (`Вы выиграли. Выбор компьютера "${randomOptions}"`);
   } else {
-  alert (`ничья`);
+  alert (`Ничья. Выбор компьютера "${randomOptions}"`);
   }
   break;
   default:
@@ -182,5 +182,5 @@ console.log (randomOptions);
    alert (`Вы ввели неверное значение`);
   }
   }
-  moveUser();
+  printResult();
   }
