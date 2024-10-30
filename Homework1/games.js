@@ -140,47 +140,22 @@ const options = [`камень`, `ножницы`, `бумага`,];
 const randomIndex = Math.floor(Math.random() * (options.length));
 let randomOptions = options[randomIndex];
 console.log (randomOptions);
+let userChoice = (prompt(`Давай сыграем в "Камень Ножницы Бумага"? \nНапиши "камень", "ножницы" или "бумага".`)).toLowerCase();
   
+const printResult = (userChoice, randomOptions) => {
 
-  function printResult() {
-  let userChoice = (prompt(`Давай сыграем в "Камень Ножницы Бумага"? \nНапиши "камень", "ножницы" или "бумага".`)).toLowerCase();
-  if (userChoice === 'камень' || userChoice === 'ножницы' || userChoice === 'бумага'){
-        
-    switch (randomOptions) {
-        case `камень` :
-  if (userChoice === `ножницы`) {
-  alert (`Вы проиграли. Выбор компьютера "${randomOptions}"`);
-  } else if (userChoice === `бумага`) {
-  alert (`Вы выиграли. Выбор компьютера "${randomOptions}"`);
-  } else {
-  alert (`Ничья. Выбор компьютера "${randomOptions}"`);
-  }
-  break;
-        case `ножницы` :
-  if (userChoice === `бумага`) {
-  alert (`Вы проиграли. Выбор компьютера "${randomOptions}"`);
-  } else if (userChoice === `камень`) {
-  alert (`Вы выиграли. Выбор компьютера "${randomOptions}"`);
-  } else {
-  alert (`Ничья. Выбор компьютера "${randomOptions}"`);
-  }
-  break;
-        case `бумага` :
-  if (userChoice === `камень`) {
-  alert (`Вы проиграли. Выбор компьютера "${randomOptions}"`);
-  } else if (userChoice === `ножницы`) {
-  alert (`Вы выиграли. Выбор компьютера "${randomOptions}"`);
-  } else {
-  alert (`Ничья. Выбор компьютера "${randomOptions}"`);
-  }
-  break;
-  default:
-  alert( "Нет таких значений" );
-      }
-
-  } else {
-   alert (`Вы ввели неверное значение`);
-  }
-  }
-  printResult();
-  }
+if ((userChoice === 'камень' && randomOptions === 'ножницы') || 
+(userChoice === 'ножницы' && randomOptions === 'бумага') ||
+(userChoice === 'бумага' && randomOptions === 'камень')) {
+  return `Вы выиграли. Выбор компьютера "${randomOptions}"`;
+}
+if (userChoice === randomOptions) {
+  return `Ничья. Выбор компьютера "${randomOptions}"`;
+}
+if (!options.includes(userChoice)){
+  return `Вы ввели неверное значение`;
+}
+return `Вы проиграли. Выбор компьютера "${randomOptions}"`;
+}
+alert(printResult(userChoice, randomOptions));
+}
