@@ -24,15 +24,15 @@ function guessNumber() {
           if (answer === randomInt)
               alert(`Вы УГАДАЛИ!`);
               break
-              }
-              
+              }      
   }
+
 
   //Игра "простая арифметика"
   function simpleMath() {
   
-    const randomInt1 = getRandomIntInclusive(0, 100);
-    const randomInt2 = getRandomIntInclusive(0, 100);
+    const randomInt1 = getRandomIntInclusive(1, 100);
+    const randomInt2 = getRandomIntInclusive(1, 100);
     
     const signs = [`+`, `-`, `*`, `/`];
     const randomIndex = Math.floor(Math.random() * (signs.length));
@@ -54,7 +54,7 @@ function guessNumber() {
         result = randomInt1 * randomInt2;
            break;
       case `/` :
-        if (randomInt1 < randomInt2 || randomInt2 == 0) {
+        if (randomInt1 < randomInt2) {
           task =(`${randomInt2} / ${randomInt1} (ответ округлять до сотых)`);
           result = (randomInt2 / randomInt1).toFixed(2);
         } else {
@@ -74,7 +74,7 @@ function guessNumber() {
           alert (`Вы решили задачу верно!`);
       }
       else{
-        alert (`Вы решили задачу НЕверно!`);
+        alert (`Вы решили задачу НЕверно! \nПравильный ответ "${result}"`);
       }
     }
   
@@ -82,65 +82,52 @@ function guessNumber() {
     }
 
 
-
-
-
-/*let userAnswear = Number(prompt(`Решите задачу? \n ${result}`));
-if (userAnswear === result) {
-    alert (`Вы решили задачу верно!`);
-    } 
-    else {
-        alert (`Вы решили задачу НЕверно!`);
-    }
-
-  
-
-  if (randomSigns === `+`) {
-    task = (`${randomInt1} + ${randomInt2}`);
-}
-if (randomSigns === `-`) {
-    task = (`${randomInt1} - ${randomInt2}`);
-}
-if (randomSigns === `*`) {
-   task = (`${randomInt1} * ${randomInt2}`);
-}
-if (randomSigns === `/`) {
-    task = (`${randomInt1} / ${randomInt2}`);
-}
-
-function getRes() {
-let result;
-let task;
-switch (randomSigns) {
-  case `+` :
-    task = (`${randomInt1} + ${randomInt2}`);
-    result = prompt(`Решите задачу? \n ${task}`);
-        break;
-  case `-` :
-    task = (`${randomInt1} - ${randomInt2}`);
-    result = prompt(`Решите задачу? \n ${task}`);
-        break;
-  case `*` :
-    task = (`${randomInt1} * ${randomInt2}`);
-    result = prompt(`Решите задачу? \n ${task}`);
-       break;
-  case `/` :
-    result = task = (`${randomInt1} / ${randomInt2}`);
-    prompt(`Решите задачу? \n ${task}`);
-      break;
-    default:
-    alert( "Нет таких значений" );
-}
-if (result === task) {
-  alert (`Вы решили задачу верно!`);
-  } 
-  else {
-      alert (`Вы решили задачу НЕверно!`);
+// Игра "переверни текст"
+function reverseText() {
+let userText = prompt(`Введите слово, чтобы я перевернул`);
+let lowerUserText = userText.toLowerCase();
+let reversUserText = lowerUserText.split('').reverse().join('');
+if (!isNaN(userText)){
+      alert (`Вы ввели НЕ текстовое значение!`);
+  }
+  else{
+    alert (reversUserText);
   }
 }
-}
+
+
+// Игра "викторина"
+function simpleQuiz() {
+  const quiz = [
+    { question: `Какой цвет неба?`,
+      options: [`1. Красный`, `2. Синий`, `3. Зеленый`],
+      correctAnswer: 2, 
+    },
+    { question: `Сколько дней в неделе?`,
+      options: [`1. Шесть`, `2. Семь`, `3. Восемь`],
+      correctAnswer: 2,
+    },
+    { question: `Сколько у человека пальцев на одной руке?`,
+      options: [`1. Четыре`, `2. Пять`, `3. Шесть`],
+      correctAnswer: 2,
+    },
+    { question: `Сколько зубов у человека?`,
+      options: [`1. Тридцать два`, `2. Сорок`, `3. Двадцать`],
+      correctAnswer: 1,
+    }
+  ]
   
-
-
-
-  */
+  let num = 0;
+  for (let i = 0; i < quiz.length; i++){
+    let quizQuest = Number(prompt(`Выберите правильный ответ? \n${quiz[i].question} \n${quiz[i].options}`));
+    if (isNaN(quizQuest)){
+      alert (`Вы ввели некорректное значение!`);
+    } else if (quizQuest == quiz[i][`correctAnswer`]){
+      num++;
+      alert(`Вы ответили верно`);
+  } else{
+      alert(`Вы ответили неверно`)
+    }
+  }
+  alert(`Всего верных ответов: ${num}`);
+}
