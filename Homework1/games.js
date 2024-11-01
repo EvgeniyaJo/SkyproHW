@@ -3,7 +3,7 @@ function getRandomIntInclusive(min, max) {
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1) + min); 
 }
-// Игра "угадай число"
+// 1 Игра "угадай число"
 function guessNumber() {
     
   const randomInt = getRandomIntInclusive(0, 100);  
@@ -28,7 +28,7 @@ function guessNumber() {
   }
 
 
-  //Игра "простая арифметика"
+  //2 Игра "простая арифметика"
   function simpleMath() {
   
     const randomInt1 = getRandomIntInclusive(1, 100);
@@ -82,7 +82,7 @@ function guessNumber() {
     }
 
 
-// Игра "переверни текст"
+//3 Игра "переверни текст"
 function reverseText() {
 let userText = prompt(`Введите слово, чтобы я перевернул`);
 let lowerUserText = userText.toLowerCase();
@@ -96,7 +96,7 @@ if (!isNaN(userText)){
 }
 
 
-// Игра "викторина"
+//4 Игра "викторина"
 function simpleQuiz() {
   const quiz = [
     { question: `Какой цвет неба?`,
@@ -119,7 +119,7 @@ function simpleQuiz() {
   
   let num = 0;
   for (let i = 0; i < quiz.length; i++){
-    let quizQuest = Number(prompt(`Выберите правильный ответ? \n${quiz[i].question} \n${quiz[i].options}`));
+    let quizQuest = Number(prompt(`Выберите верный вариант ответа? \n${quiz[i].question} \n${quiz[i].options}`));
     if (isNaN(quizQuest)){
       alert (`Вы ввели некорректное значение!`);
     } else if (quizQuest == quiz[i][`correctAnswer`]){
@@ -130,4 +130,32 @@ function simpleQuiz() {
     }
   }
   alert(`Всего верных ответов: ${num}`);
+}
+
+
+//5 Игра "камень, ножницы, бумага"
+function RockPaperScissors() {
+
+const options = [`камень`, `ножницы`, `бумага`,];
+const randomIndex = Math.floor(Math.random() * (options.length));
+let randomOptions = options[randomIndex];
+console.log (randomOptions);
+let userChoice = (prompt(`Давай сыграем в "Камень Ножницы Бумага"? \nНапиши "камень", "ножницы" или "бумага".`)).toLowerCase();
+  
+const printResult = (userChoice, randomOptions) => {
+
+if ((userChoice === 'камень' && randomOptions === 'ножницы') || 
+(userChoice === 'ножницы' && randomOptions === 'бумага') ||
+(userChoice === 'бумага' && randomOptions === 'камень')) {
+  return `Вы выиграли. Выбор компьютера "${randomOptions}"`;
+}
+if (userChoice === randomOptions) {
+  return `Ничья. Выбор компьютера "${randomOptions}"`;
+}
+if (!options.includes(userChoice)){
+  return `Вы ввели неверное значение`;
+}
+return `Вы проиграли. Выбор компьютера "${randomOptions}"`;
+}
+alert(printResult(userChoice, randomOptions));
 }
