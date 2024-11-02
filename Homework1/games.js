@@ -159,3 +159,19 @@ return `Вы проиграли. Выбор компьютера "${randomOption
 }
 alert(printResult(userChoice, randomOptions));
 }
+
+
+//6 Игра "генератор случайных цветов"
+function colorGenerator() {
+const colors = [`grey`, `red`, `green`, `yellow`, `orange`, `pink`, `brown`, `violet`, `firebrick`, `cyan`, `maroon`, `lime`, `fuchsia`,];
+const randomIndex = Math.floor(Math.random() * (colors.length));
+let randomColors = colors[randomIndex];
+
+
+const element = document.querySelector('.content');
+const button = document.querySelector('.btn__color');
+button.addEventListener ('click', function () {
+    element.style.backgroundColor = randomColors;
+    
+});
+}
