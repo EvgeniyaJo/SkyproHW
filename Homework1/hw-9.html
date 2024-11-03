@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .heading1 {
+            display: block;
+        }
+    </style>
 </head>
 <body>
     
@@ -28,6 +33,7 @@
 <p class="description">Lorem ipsum dolor sit amet.</p>
 <p class="text4">Lorem, ipsum dolor.</p>
 <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, ipsum.</p>
+<button class="button4">Изменить текст</button>
 </div>
 
 <div class="div6">
@@ -49,9 +55,9 @@
 const headingEl1 = document.querySelector ('.heading1');
 const buttonEl1 = document.querySelector ('.button1');
 buttonEl1.addEventListener ('click', function () {
-    if (headingEl1.style.display === 'block') {
-    headingEl1.style.display = 'none';}
- else {headingEl1.style.display = 'block'}
+    if (headingEl1.style.display === 'none') {
+    headingEl1.style.display = 'block';}
+ else {headingEl1.style.display = 'none'}
 });
 
 2//
@@ -71,11 +77,13 @@ buttonEl3.addEventListener ('click', function () {
 
 //4 и 5
 const element = document.querySelectorAll('.description');
-console.log(element);
-element.forEach (description => {
-    element.textContent = 'Измененный текст';
+const buttonEl4 = document.querySelector ('.button4');
+buttonEl4.addEventListener ('click', function () {
+    element.forEach (description => {
+    description.textContent = 'Измененный текст';
 });
-console.log (element.textContent);
+});
+
 
 //6
 const buttonEl6 = document.querySelector ('.button6');
