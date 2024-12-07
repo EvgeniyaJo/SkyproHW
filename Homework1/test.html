@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .scroll {
+            overflow: hidden;
+max-width: 100%;
+max-width: 3220px;
+background: rgb(188, 236, 48);
+        }
+        #strip {
+          position: relative;
+          cursor: pointer;
+          overflow: hidden;
+        }
+      </style>
+</head>
+<body>
+    <div class="scroll">
+    <div>
+        <img id="strip" src="image/scrollStrip.jpeg" alt="gjkjcf">
+    </div>
+</div>
+
+    <script>
+        let start = Date.now(); 
+
+let timer = setInterval(function() {
+ 
+  let timePassed = Date.now() - start;
+
+  if (timePassed >= 20000) {
+    clearInterval(timer); 
+    return;
+  }
+
+  draw(timePassed);
+
+}, 100);
+
+function draw(timePassed) {
+  strip.style.right = timePassed / 5 + 'px';
+}
+    </script>
+</body>
+</html>
